@@ -8,6 +8,28 @@
         "env": []
     },
     {
+        "id": "bbeba646ef1a22e9",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4333922191c07cc4",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6158fd0d44510cd5",
+        "type": "git-nodes-config",
+        "name": "erer",
+        "git": ""
+    },
+    {
         "id": "bac2cce0fbbd78a8",
         "type": "inject",
         "z": "0a8e17a6b5114fcf",
@@ -28,7 +50,116 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 340,
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "47111379bb35e94e"
+            ]
+        ]
+    },
+    {
+        "id": "263803643c778efa",
+        "type": "debug",
+        "z": "0a8e17a6b5114fcf",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "47111379bb35e94e",
+        "type": "function",
+        "z": "0a8e17a6b5114fcf",
+        "name": "function 1",
+        "func": "msg.payload='Hola Mundo';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 140,
+        "wires": [
+            [
+                "92e93900cf44e84f"
+            ]
+        ]
+    },
+    {
+        "id": "92e93900cf44e84f",
+        "type": "delay",
+        "z": "0a8e17a6b5114fcf",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "263803643c778efa"
+            ]
+        ]
+    },
+    {
+        "id": "78d0ad80e061c619",
+        "type": "git-nodes",
+        "z": "0a8e17a6b5114fcf",
+        "label": "",
+        "branch": "master",
+        "sourcebranch": "master",
+        "gitadd": "settings.js,package.json,.config.json,lib",
+        "gitrmcache": "nodes/*/x,nodes/*/y,nodes/*/z",
+        "debugging": true,
+        "git": "6158fd0d44510cd5",
+        "x": 640,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f7a83b56e619fb75",
+        "type": "file",
+        "z": "0a8e17a6b5114fcf",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 520,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0408b5790c9fa5fc",
+        "type": "json",
+        "z": "0a8e17a6b5114fcf",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 170,
         "y": 320,
         "wires": [
             []
