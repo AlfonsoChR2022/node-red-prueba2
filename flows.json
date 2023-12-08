@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "4333922191c07cc4",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "6158fd0d44510cd5",
         "type": "git-nodes-config",
         "name": "erer",
@@ -125,5 +133,36 @@
         "x": 640,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "f7a83b56e619fb75",
+        "type": "file",
+        "z": "0a8e17a6b5114fcf",
+        "name": "",
+        "filename": "",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 520,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0408b5790c9fa5fc",
+        "type": "json",
+        "z": "0a8e17a6b5114fcf",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 170,
+        "y": 320,
+        "wires": [
+            []
+        ]
     }
 ]
